@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+    --main-color : linear-gradient(97deg, rgb(173, 186, 230) 35.62%, rgb(0, 255, 255) 100%);
+    --main-key : linear-gradient(91deg, #FF6F61 4.62%, #FF6F61 100%);
+    --main-key-active : linear-gradient(91deg, rgba(221, 48, 48, 0.8) 4.62%, rgba(177, 19, 19, 0.8) 100%);
+    --main-loader : #FFDAB9;
+}
+
+* {
+    font-family: 'Kanit', sans-serif;
+    user-select: none;
+}
+
+.working-box {
+    position: fixed;
+    top: 30%;
+    left: -6rem;
+    transform: translate(50% , 50%);
+    width: 14rem;
+    height: auto;
+}
+
+.working-box-header {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding : 10px;
+    border-radius: 10px 10px 0px 0px;
+    color: #fff;
+}
+.working-box-body {
+    background-color: rgba(39, 39, 39, 0.616);
+    padding : 10px;
+    border-radius: 0px 0px 10px 10px;
+    color: #fff;
+}
+
+.working-box-bottom {
+    margin-top: 5px;
+    background-color: rgba(39, 39, 39, 0.616);
+    padding : 10px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.img-main {
+    width: 5rem;
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg);
+}
+
+.working-img-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    height: 7rem;
+}
+
+.badge {
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: rgba(40, 40, 40, 0.705);
+}
+
+.text-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+code {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+code[class= 'non-ready'] {
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 5px;
+    background: var(--main-key-active);
+    box-shadow: 0 0 0 .2vh #ffdfdf;
+    filter: drop-shadow(0 0 .2em #ffb7b7);
+    
+}
+
+code[class= 'ready'] {
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 5px;
+    background: var(--main-key);
+    box-shadow: 0 0 0 .2vh #dfffe8;
+    filter: drop-shadow(0 0 .2em #b7ffca);
+}
+
+.loader-bar {
+    align-items: center;
+    background-color: rgba(42, 42, 42, 0.616);
+    border-radius: 10px;
+    height: 7.6rem;
+    padding: 0px;
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg); 
+}
+
+.loading {
+    height: 0%;
+    padding: 5px;
+    background-color:var(--main-loader);
+    border-radius: 10px;
+    animation-fill-mode: forwards;
+    animation-name: loading-animation;
+    /* animation: loading-animation 3.0s forwards; */
+    box-shadow: 0 0 0 .2vh #dff4ff;
+    filter: drop-shadow(0 0 .2em #b7dfff);
+}
+
+.working-box-closed {
+    animation-name: closed-animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1.0s;
+}
+
+@keyframes loading-animation {
+    from {
+        height: 0rem;
+    }
+    to {
+        height: 7rem;
+    }
+}
+.working-box-open {
+    animation-name: open-animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1.0s;
+}
+
+@keyframes open-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes closed-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.img-bonus {
+    width: 48px;
+}
+
+.item-bonus-list {
+    display: flex;
+    flex-flow: nowrap;
+    column-gap: 3px;
+    overflow: auto;
+}
+
+.item-bonus-list::-webkit-scrollbar {
+    width: 1em;
+    height: 5px;
+}
+   
+.item-bonus-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.item-bonus-list::-webkit-scrollbar-thumb {
+    background-color: rgb(178, 215, 254);
+    outline: 1px solid rgb(4, 81, 157);
+}
+
+.item-bonus {
+    margin-bottom: 3px;
+    padding: 4px;
+    background-color: rgba(39, 39, 39, 0.822);
+    width: auto;
+    border-radius: 10px;
+}
